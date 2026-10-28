@@ -1,0 +1,6 @@
+{
+  "name": "LONA AI",
+  "description": "Futuristic AI voice assistant, coding workspace, and permission center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

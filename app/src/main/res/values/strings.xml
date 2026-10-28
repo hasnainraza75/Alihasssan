@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">LONA AI</string>
+    <string name="app_subtitle">Futuristic Neural AI Assistant</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_voice">Voice</string>
+    <string name="nav_coding">Coding</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Status -->
+    <string name="status_ready">SYSTEM READY</string>
+    <string name="status_listening">LISTENING…</string>
+    <string name="status_thinking">QUANTUM CORE PROCESSING…</string>
+    <string name="status_speaking">SPEAKING…</string>
+    <string name="status_error">SYNAPSE ERROR</string>
+    <string name="status_connected">NEURAL LINK ACTIVE</string>
+    <string name="status_no_key">API KEY REQUIRED</string>
+
+    <!-- Prompts -->
+    <string name="tap_to_talk">Tap to Speak with LONA</string>
+    <string name="stop_talking">Stop</string>
+    <string name="type_a_message">Type your message or prompt…</string>
+    <string name="send">Send</string>
+
+    <!-- Coding Workspace -->
+    <string name="code_workspace_title">LONA Code Matrix</string>
+    <string name="code_preview">Live Preview</string>
+    <string name="code_editor">Editor</string>
+    <string name="code_files">Files</string>
+    <string name="code_run">Run</string>
+    <string name="code_copy">Copy Code</string>
+    <string name="code_export">Export Project</string>
+
+    <!-- Permissions -->
+    <string name="permissions_title">System Permission Matrix</string>
+    <string name="permissions_subtitle">Control all Android access permissions with granular transparency</string>
+    <string name="permission_granted">Granted</string>
+    <string name="permission_denied">Not Granted</string>
+    <string name="permission_request">Grant Access</string>
+    <string name="permission_open_settings">System Settings</string>
+
+    <!-- Settings -->
+    <string name="settings_title">LONA Control Center</string>
+    <string name="settings_api">Gemini API Neural Key</string>
+    <string name="settings_voice">Voice &amp; Neural Persona</string>
+    <string name="settings_theme">Neon Hologram Aesthetics</string>
+    <string name="settings_about">About LONA AI</string>
+</resources>
