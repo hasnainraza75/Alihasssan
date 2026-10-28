@@ -30,6 +30,7 @@ enum class AppScreen {
     VOICE_HUD,
     CODING,
     PERMISSIONS,
+    SUPPLIERS,
     SETTINGS
 }
 

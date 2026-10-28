@@ -69,6 +69,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ui.AppScreen
 import com.example.ui.MainViewModel
 import com.example.ui.theme.DarkNavyBorder
 import com.example.ui.theme.DarkNavyCard
@@ -139,7 +140,35 @@ fun SettingsScreen(
             fontFamily = FontFamily.Monospace
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Button(
+                onClick = { viewModel.navigateTo(AppScreen.SUPPLIERS) },
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = DarkNavyCard),
+                border = androidx.compose.foundation.BorderStroke(1.dp, accentColor)
+            ) {
+                Text("⚡ Suppliers Matrix", fontSize = 11.sp, color = accentColor, fontFamily = FontFamily.Monospace)
+            }
+            Button(
+                onClick = { viewModel.navigateTo(AppScreen.PERMISSIONS) },
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(10.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = DarkNavyCard),
+                border = androidx.compose.foundation.BorderStroke(1.dp, NeonPurple)
+            ) {
+                Text("🛡 Permissions", fontSize = 11.sp, color = NeonPurple, fontFamily = FontFamily.Monospace)
+            }
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
 
         // 1. GEMINI NEURAL GATEWAY (NO FIREBASE)
         SettingsSection(title = "GEMINI API CONFIGURATION", icon = Icons.Default.Key, accentColor = accentColor) {

@@ -20,9 +20,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Chat
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Hub
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -48,8 +48,8 @@ import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.PermissionCenterScreen
 import com.example.ui.screens.SettingsScreen
 import com.example.ui.screens.SplashScreen
+import com.example.ui.screens.SuppliersScreen
 import com.example.ui.screens.VoiceHudModal
-import com.example.ui.theme.DarkNavyBorder
 import com.example.ui.theme.DarkNavyCard
 import com.example.ui.theme.DarkNavySurface
 import com.example.ui.theme.DeepCosmicBlack
@@ -118,6 +118,7 @@ class MainActivity : ComponentActivity() {
                                     AppScreen.CHAT -> ChatScreen(viewModel = viewModel, accentColor = accentColor)
                                     AppScreen.VOICE_HUD -> VoiceHudModal(viewModel = viewModel, accentColor = accentColor)
                                     AppScreen.CODING -> CodingWorkspaceScreen(viewModel = viewModel, accentColor = accentColor)
+                                    AppScreen.SUPPLIERS -> SuppliersScreen(viewModel = viewModel, accentColor = accentColor)
                                     AppScreen.PERMISSIONS -> PermissionCenterScreen(viewModel = viewModel, accentColor = accentColor)
                                     AppScreen.SETTINGS -> SettingsScreen(viewModel = viewModel, accentColor = accentColor)
                                     else -> HomeScreen(viewModel = viewModel, accentColor = accentColor)
@@ -226,12 +227,12 @@ fun LonaBottomNavigation(
             )
         )
 
-        // 5. Settings / Permissions
+        // 5. Suppliers / AI Providers Matrix
         NavigationBarItem(
-            selected = currentScreen == AppScreen.SETTINGS || currentScreen == AppScreen.PERMISSIONS,
-            onClick = { onSelectScreen(AppScreen.SETTINGS) },
-            icon = { Icon(imageVector = Icons.Default.Settings, contentDescription = "Settings", modifier = Modifier.size(22.dp)) },
-            label = { Text("Control", fontSize = 10.sp, fontFamily = FontFamily.Monospace) },
+            selected = currentScreen == AppScreen.SUPPLIERS,
+            onClick = { onSelectScreen(AppScreen.SUPPLIERS) },
+            icon = { Icon(imageVector = Icons.Default.Hub, contentDescription = "Suppliers", modifier = Modifier.size(22.dp)) },
+            label = { Text("Suppliers", fontSize = 10.sp, fontFamily = FontFamily.Monospace) },
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = Color.Black,
                 selectedTextColor = accentColor,

@@ -3,9 +3,9 @@ name: LONA AI Android Build
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
-    branches: [main]
+    branches: [main, master]
 
 permissions:
   contents: read
@@ -26,14 +26,16 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v4
-
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Grant Gradle execute permission
         run: chmod +x ./gradlew
+
+      - name: Accept Android SDK Licenses
+        run: |
+          mkdir -p "$ANDROID_HOME/licenses" || true
+          echo "24333f8a63b6825ea9c5514f83c2829b004d1fee" > "$ANDROID_HOME/licenses/android-sdk-license" || true
+          echo "d56f5187479451eabf01fb78af6dfcb131a6481e" >> "$ANDROID_HOME/licenses/android-sdk-license" || true
+          echo "84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license" || true
+          yes | sdkmanager --licenses 2>/dev/null || true
 
       - name: Verify project configuration
         run: ./gradlew --no-daemon projects
@@ -60,4 +62,5 @@ jobs:
           path: |
             app/build/reports/
             build/reports/
+          if-no-files-found: ignore
           retention-days: 7

@@ -338,13 +338,16 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             val suggestions = listOf(
+                "Suppliers & AI Ecosystem" to {
+                    viewModel.navigateTo(AppScreen.SUPPLIERS)
+                },
                 "Build Cyberpunk Login Page" to {
                     viewModel.navigateTo(AppScreen.CODING)
                 },
                 "Open Voice Hologram HUD" to {
                     viewModel.navigateTo(AppScreen.VOICE_HUD)
                 },
-                "Inspect Permission Matrix" to {
+                "System Permission Matrix" to {
                     viewModel.navigateTo(AppScreen.PERMISSIONS)
                 },
                 "Ping Gemini Neural Link" to {
