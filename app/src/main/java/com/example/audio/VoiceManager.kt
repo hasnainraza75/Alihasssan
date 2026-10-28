@@ -154,8 +154,8 @@ class VoiceManager(private val context: Context) : TextToSpeech.OnInitListener {
         stopListening()
 
         val locale = when (language) {
-            "ur" -> Locale("ur", "PK")
-            "hi" -> Locale("hi", "IN")
+            "ur" -> Locale.forLanguageTag("ur-PK")
+            "hi" -> Locale.forLanguageTag("hi-IN")
             else -> Locale.US
         }
 

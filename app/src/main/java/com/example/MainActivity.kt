@@ -17,7 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Chat
+import androidx.compose.material.icons.automirrored.filled.Chat
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Hub
@@ -170,7 +170,7 @@ fun LonaBottomNavigation(
         NavigationBarItem(
             selected = currentScreen == AppScreen.CHAT,
             onClick = { onSelectScreen(AppScreen.CHAT) },
-            icon = { Icon(imageVector = Icons.Default.Chat, contentDescription = "Chat", modifier = Modifier.size(22.dp)) },
+            icon = { Icon(imageVector = Icons.AutoMirrored.Filled.Chat, contentDescription = "Chat", modifier = Modifier.size(22.dp)) },
             label = { Text("Chat", fontSize = 10.sp, fontFamily = FontFamily.Monospace) },
             colors = NavigationBarItemDefaults.colors(
                 selectedIconColor = Color.Black,
